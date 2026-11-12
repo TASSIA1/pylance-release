@@ -1,0 +1,20 @@
+{
+  "name": "loic-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Loïc App — vente, location et gestion de matériel topographique (Android)",
+  "scripts": {
+    "serve": "npx --yes http-server www -p 8080 -c-1",
+    "android:init": "npx cap add android && npx @capacitor/assets generate --android || true",
+    "android:sync": "npx cap sync android",
+    "android:open": "npx cap open android",
+    "apk": "npx cap sync android && cd android && ./gradlew assembleDebug"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/core": "^6.1.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.1.2"
+  }
+}

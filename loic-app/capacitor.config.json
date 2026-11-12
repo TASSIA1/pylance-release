@@ -1,0 +1,7 @@
+{
+  "appId": "com.loicapp.topo",
+  "appName": "Loïc App",
+  "webDir": "www",
+  "android": { "backgroundColor": "#0B1F3A" },
+  "server": { "androidScheme": "https" }
+}

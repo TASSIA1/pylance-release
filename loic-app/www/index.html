@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B1F3A">
+  <meta name="description" content="Loïc App : vente, location et réservation d'appareils topographiques à Mbalgong.">
+  <title>Loïc App</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="splash"><img src="icons/logo.svg" alt=""><strong>Loïc App</strong><span>Matériel topographique</span></div>
+  <header class="topbar">
+    <a href="#/" class="brand"><img src="icons/logo.svg" alt=""><span>Loïc<b>App</b></span></a>
+    <div class="top-actions">
+      <a href="#/panier" class="icon-btn" aria-label="Panier"><svg viewBox="0 0 24 24"><path d="M3 4h2l2.4 11.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 2-1.5L21 8H6.2"/><circle cx="10" cy="20.5" r="1.3"/><circle cx="17" cy="20.5" r="1.3"/></svg><i id="cartBadge" class="badge" hidden></i></a>
+      <a href="#/admin" class="icon-btn" aria-label="Gestion"><svg viewBox="0 0 24 24"><rect x="4" y="10" width="16" height="11" rx="2.5"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></a>
+    </div>
+  </header>
+  <main id="view"></main>
+  <nav class="tabbar" id="tabbar">
+    <a href="#/" data-tab="home"><svg viewBox="0 0 24 24"><path d="M3 11 12 4l9 7v9a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></svg><span>Accueil</span></a>
+    <a href="#/vente" data-tab="vente"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 13.4 20.6a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg><span>Vente</span></a>
+    <a href="#/location" data-tab="location"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2.5"/><path d="M3 10h18M8 3v4M16 3v4M8 14h3M8 17h6"/></svg><span>Location</span></a>
+    <a href="#/prestations" data-tab="prestations"><svg viewBox="0 0 24 24"><path d="M9 20 3 17V4l6 3 6-3 6 3v13l-6-3-6 3zM9 7v13M15 4v13"/></svg><span>Services</span></a>
+    <a href="#/compte" data-tab="compte"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg><span>Mes suivis</span></a>
+  </nav>
+  <div id="sheet" class="sheet" hidden><div class="sheet-backdrop" data-act="closeSheet"></div><div class="sheet-panel" id="sheetPanel"></div></div>
+  <div id="toast" class="toast" hidden></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
