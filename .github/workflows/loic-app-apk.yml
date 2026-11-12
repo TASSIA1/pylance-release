@@ -7,6 +7,9 @@ on:
       - 'loic-app/**'
       - '.github/workflows/loic-app-apk.yml'
 
+permissions:
+  contents: write
+
 jobs:
   apk:
     runs-on: ubuntu-latest
@@ -38,3 +41,17 @@ jobs:
         with:
           name: LoicApp-apk
           path: loic-app/android/app/build/outputs/apk/debug/app-debug.apk
+      - name: Renommer l'APK
+        run: cp android/app/build/outputs/apk/debug/app-debug.apk LoicApp.apk
+      - name: Publier l'APK (lien de téléchargement direct)
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: loic-app
+          name: Loïc App — application Android
+          target_commitish: ${{ github.sha }}
+          make_latest: true
+          body: |
+            Télécharger **LoicApp.apk** ci-dessous puis l'ouvrir sur le téléphone Android pour l'installer.
+            Lien direct : https://github.com/${{ github.repository }}/releases/download/loic-app/LoicApp.apk
+          files: loic-app/LoicApp.apk
+          overwrite_files: true
