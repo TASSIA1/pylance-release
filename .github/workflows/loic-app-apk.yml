@@ -23,6 +23,12 @@ jobs:
           distribution: temurin
           java-version: 17
       - uses: android-actions/setup-android@v3
+      - name: Générer les icônes PNG à partir des logos SVG
+        run: |
+          sudo apt-get update && sudo apt-get install -y librsvg2-bin
+          rsvg-convert -w 192 -h 192 www/icons/logo.svg -o www/icons/icon-192.png
+          rsvg-convert -w 512 -h 512 www/icons/logo.svg -o www/icons/icon-512.png
+          rsvg-convert -w 512 -h 512 www/icons/maskable.svg -o www/icons/icon-maskable-512.png
       - run: npm install
       - run: npx cap add android
       - run: npx cap sync android
