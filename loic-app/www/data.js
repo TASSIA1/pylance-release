@@ -3,7 +3,7 @@ window.LOIC_COMPANY = {
   name: 'Loïc App',
   tagline: 'Matériel topographique — Vente • Location • Prestations',
   city: 'Mbalgong, Cameroun',
-  phones: ['+237 676 173 003', '690 583 91'],
+  phones: ['+237 676 173 003', '+237 690 583 091'],
   whatsapp: '237676173003',
   email: 'tassialoic9@gmail.com',
   hours: 'Lun – Sam : 7h30 – 18h30'

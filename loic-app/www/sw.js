@@ -1,4 +1,4 @@
-const CACHE = 'loicapp-v1';
+const CACHE = 'loicapp-v2';
 const SHELL = ['./', './index.html', './styles.css', './app.js', './data.js', './manifest.webmanifest', './icons/icon-192.png', './icons/icon-512.png', './icons/logo.svg'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL))); self.skipWaiting(); });
 self.addEventListener('activate', e => {

@@ -1,7 +1,7 @@
 # Loïc App — Matériel topographique
 
 Application Android de **vente**, **location**, **réservation** et **gestion de stock** d'appareils topographiques.
-Basée à **Mbalgong** — ☎ +237 676 173 003 / 690 583 91 — ✉ tassialoic9@gmail.com
+Basée à **Mbalgong** — ☎ +237 676 173 003 / +237 690 583 091 — ✉ tassialoic9@gmail.com
 
 Couleurs : bleu marine `#0B1F3A`, blanc, vert `#1FA35B` — Police : *Plus Jakarta Sans*.
 
